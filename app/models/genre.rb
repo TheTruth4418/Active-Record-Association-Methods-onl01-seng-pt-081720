@@ -20,7 +20,8 @@ class Genre < ActiveRecord::Base
     names = []
 
     self.songs.map do |song|
-      song.artist.name
+      names << song.artist.name
     end
+    names
   end
 end
